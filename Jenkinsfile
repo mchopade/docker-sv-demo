@@ -1,5 +1,5 @@
 node() {
-    docker.withRegistry('https://hub.docker.com/r/vmahto/docker-sv-demo/', 'docker-hub-cred') {
+    	sudo docker.withRegistry('localhost:5000', 'node') {
     
         git url: "https://github.com/vikramsv/docker-sv-demo.git", credentialsId: 'Github'
     
@@ -8,7 +8,7 @@ node() {
         println commit_id
     
         stage "build"
-        def app = docker.build "docker-sv-demo"
+        def app = sudo docker.build "docker-sv-demo"
     
         stage "publish"
         app.push 'master'
