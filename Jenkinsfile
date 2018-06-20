@@ -1,5 +1,5 @@
 node() {
-    	sudo docker.withRegistry('tcp://127.0.0.1:4243', 'node') {
+    	sudo docker.withRegistry('http://127.0.0.1:4243', 'node') {
     
         git url: "https://github.com/vikramsv/docker-sv-demo.git", credentialsId: 'Github'
     
