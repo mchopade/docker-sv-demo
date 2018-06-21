@@ -6,7 +6,10 @@ node {
 
         checkout scm
     }
-
+	stage ('Java Build') {
+    	// build .war package
+    	sh 'mvn clean package -U'
+  	}
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line ok*/
