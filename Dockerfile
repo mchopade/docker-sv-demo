@@ -1,4 +1,4 @@
-FROM tomcat:8
+FROM 127.0.0.1:5001/docker-sv-demo:latest
 
 # Add Maven dependencies (not shaded into the artifact; Docker-cached)
 
