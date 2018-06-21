@@ -1,4 +1,4 @@
-FROM 127.0.0.1:5001/docker-sv-demo:latest
+FROM 127.0.0.1:5001/docker-sv-demo:v2
 
 # Add Maven dependencies (not shaded into the artifact; Docker-cached)
 
