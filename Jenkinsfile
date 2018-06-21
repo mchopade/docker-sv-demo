@@ -7,7 +7,7 @@ node() {
     
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
-        println got commit_id 
+         echo 'commit_id....'
      
         stage "build"
         def app = docker.build "docker-sv-demo"

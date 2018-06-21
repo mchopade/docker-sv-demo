@@ -37,7 +37,7 @@
 		<finalName>docker-demo</finalName>
 		<plugins>
 
-			<plugin>
+			<!-- <plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.3</version>
@@ -57,7 +57,7 @@
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
 				</configuration>
-			</plugin>
+			</plugin> -->
 			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
