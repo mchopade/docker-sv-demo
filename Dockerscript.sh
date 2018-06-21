@@ -1,5 +1,5 @@
 #!/bin/bash
-file="target/docker/image-id"
+file="./target/docker/image-id"
 
 img_id=$(cat "$file")      
 
