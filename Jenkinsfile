@@ -1,3 +1,5 @@
+import jenkins.model.*
+jenkins = Jenkins.instance
 node() {
     	docker.withRegistry('http://127.0.0.1:5001', 'jenkins') {
     
