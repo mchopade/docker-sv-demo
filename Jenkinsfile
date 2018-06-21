@@ -21,7 +21,7 @@ node {
     stage('Test image') {
        
         app.inside {
-            sh 'echo "Tests passed"+app.id'
+            sh 'echo "Tests passed"+$app.id'
         }
     }
 
@@ -36,7 +36,7 @@ node {
         
     stage('Start Container') {
     	/* Post Build Action */
-    	sh 'sh Dockerscript.sh $app.id'
+    	app.run(['-p 8081:8080'])
     }
   }
 }
