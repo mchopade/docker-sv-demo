@@ -19,9 +19,7 @@ node {
     }
 
     stage('Test image') {
-        /* Ideally, we would run a test framework against our image.
-         * For this example, we're using a Volkswagen-type approach ;-) */
-
+       
         app.inside {
             sh 'echo "Tests passed"'
         }
@@ -35,5 +33,10 @@ node {
         docker.withRegistry('http://127.0.0.1:5001', 'jenkins') {
              app.push("v2")
         }
+        
+    stage('Start Container') {
+        sh Dockerscript.sh
     }
+        
+  }
 }
