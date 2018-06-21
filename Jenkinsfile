@@ -35,7 +35,7 @@ node {
         }
         
     stage('Start Container') {
-    	/* Post Build Action */
+    	/* Post Build Action ok*/
     	app.run(['-p 8081:8080'])
     }
   }
