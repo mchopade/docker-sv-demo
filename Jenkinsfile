@@ -13,8 +13,9 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line ok*/
-
-        app = docker.build("getintodevops/hellonode")
+		docker.withRegistry('http://127.0.0.1:5001', 'jenkins') {
+        	app = docker.build("localhost/docker-sv-demo")
+        }
     }
 
     stage('Test image') {
@@ -31,7 +32,7 @@ node {
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('https://127.0.0.1', 'jenkins') {
+        docker.withRegistry('http://127.0.0.1', 'jenkins') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
