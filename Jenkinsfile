@@ -1,5 +1,5 @@
 node() {
-    	sudo docker.withRegistry('http://127.0.0.1:5001', 'jenkins') {
+    	docker.withRegistry('http://127.0.0.1:5001', 'jenkins') {
     
         git url: "https://github.com/vikramsv/docker-sv-demo.git", credentialsId: 'Github'
     
@@ -8,7 +8,7 @@ node() {
         println got commit_id 
      
         stage "build"
-        def app = sudo docker.build "docker-sv-demo"
+        def app = docker.build "docker-sv-demo"
     
         stage "publish"
         app.push 'master'
