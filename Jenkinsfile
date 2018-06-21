@@ -36,7 +36,7 @@ node {
         
     stage('Start Container') {
     	/* Post Build Action */
-    	dir ('/') { 
+    	dir { 
     		sh('Dockerscript.sh')
 		}
     }
