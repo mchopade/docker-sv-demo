@@ -7,6 +7,6 @@
 <title>Docker-Demo</title>
 </head>
 <body>
-<h2>Hello World! Test Differential Docker IMAGE version V1</h2>
+<h2>Hello World! Test Differential Docker IMAGE version V2</h2>
 </body>
 </html>
