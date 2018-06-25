@@ -31,7 +31,7 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('http://127.0.0.1:5001', 'jenkins') {
-             app.push("v4")
+             app.push("v5")
         }
         
     stage('Start Container') {
